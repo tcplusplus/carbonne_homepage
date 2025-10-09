@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Carbonne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
     html, body {
@@ -11,52 +14,82 @@
       height: 100%;
       width: 100%;
       overflow: hidden;
+      font-family: "arial";
+      font-weight: bold;
     }
     .container {
       display: flex;
       flex-direction: column;
       height: 100%;
       width: 100%;
-      background: #588B8B;
+      background-image: url(background.jpeg);
+      background-size: 100% 100%;
     }
-    .part {
+    .follow-button {
+      position: absolute;
+      left: 10%;
+      width: 80%;
+      height: 10%;
+      background: #39565a;
+      border-radius: 40px;
+      font-size: 5em;
+      color: #b5b5b5;
+      text-decoration: none;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      overflow: hidden;
+      align-items: center;       /* verticaal centreren */
+      justify-content: center;   /* tekst centreren */
+      gap: 1rem;
+    }
+    .follow-logo {
+      position: absolute;
+      left: 3%;                  /* logo vast links zetten */
+      height: 70%;
+      aspect-ratio: 1;
+      border-radius: 25%;
     }
     .facebook {
-      flex: 0 0 40%;
+      bottom: 20%;
     }
     .carbonne {
       flex: 0 0 20%;
     }
     .instagram {
-      flex: 0 0 40%;
+      bottom: 5%;
     }
     img {
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
     }
+    .logo {
+      opacity: 0.05;
+      width: 80%;
+      left: 10%;
+      position: absolute;
+      top: 10%;
+    }
+    .text {
+      font-size: 6em;
+      text-align: center;
+      top: 32%;
+      position: absolute;
+      width: 100%;
+      color: #39565a;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="part facebook">
-      <a href="https://www.facebook.com/carbonne.be">
-        <img src="facebook-logo.png">
-      </a>
-    </div>
+    <p class="text">VOLG CARBONNE OP</p>
     <div class="part carbonne">
-      <img src="logo.png">
+      <img src="logo-no-text.png" class="logo">
     </div>
-    <div class="part instagram">
-      <a href="https://www.instagram.com/carbonne.by.caro">
-        <img src="instagram-logo.png">
-      </a>
-    </div>
+    <a class="follow-button facebook" href="https://www.facebook.com/carbonne.be">
+      <img src="facebook-logo.png" class="follow-logo" style="scale: 0.85;"> <div>Facebook</div>
+    </a>
+    <a class="follow-button instagram" href="https://www.instagram.com/carbonne.by.caro">
+      <img src="instagram-logo.png" class="follow-logo"> Instragram
+    </a>
   </div>
 </body>
 </html>
